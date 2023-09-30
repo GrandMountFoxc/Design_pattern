@@ -15,6 +15,11 @@ public:
         }
         return m_instance_ptr;
     }
+
+    void getAddress(){
+        cout<<this<<endl;
+    }
+
 private:
     static Singleton* m_instance_ptr;
     static mutex mtx;
@@ -30,8 +35,14 @@ private:
 
 };
 
+Singleton* Singleton::m_instance_ptr = nullptr;
+
 
 int main(){
+    Singleton* instance1 = Singleton::getInstance();
+    instance1->getAddress();
+    Singleton* instance2 = Singleton::getInstance();
+    instance2->getAddress();
 
     return 0;
 }
