@@ -1,6 +1,7 @@
 #ifndef NYSCHEESEPIZZA_H
 #define NYSCHEESEPIZZA_H
 
+#include "Pizza.h"
 class NYSCheesePizza:public Pizza{
 public:
     NYSCheesePizza(){
